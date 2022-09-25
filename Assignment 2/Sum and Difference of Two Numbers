@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{ 
+int a,b;
+int sum,diff;
+float sum2,diff2;
+float c,d;
+scanf("%d %d",&a,&b);
+scanf("%f %f",&c,&d);
+sum=a+b;
+diff=(a>b)?(a-b):(b-a);
+sum2=c+d;
+diff2=(c>d)?(c-d):(c-a);
+printf("%d %d",sum,diff);
+printf("\n%0.1f %0.1f",sum2,diff2);
+
+
+
+	
+    
+    return 0;
+}
