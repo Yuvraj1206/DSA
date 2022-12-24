@@ -1,15 +1,27 @@
 class Solution {
 public:
     int mySqrt(int x) {
-        long long i=0;
         if(x==0){
             return 0;
         }
-        for(i=1; i++; i<(x/2)){
-            if(i*i > x){
+        int s = 1 , e=x,m;
+        while(s<=e){
+            m=s+(e-s)/2;
+            if(m == x/m){
                 break;
             }
+            else if(m > x/m){
+                e=m-1;
+            }
+            else{
+                s=m+1;
+            }
         }
-        return i-1;
+        if(m>x/m){
+            return m-1;
+        }
+        else{
+            return m;
+        }
     }
 };
